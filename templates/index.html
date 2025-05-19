@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Salgados de Festa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Venda de Salgados de Festa!</h1>
+    </header>
+    <main>
+        <section id="produtos">
+            <h2>Nossos Salgados</h2>
+            <ul>
+                <li>Coxinha</li>
+                <li>Empada</li>
+                <li>Quibe</li>
+                <li>Pão de Queijo</li>
+            </ul>
+        </section>
+        <section id="pedido">
+            <h2>Faça seu Pedido</h2>
+            <form id="form-pedido">
+                <label for="salgado">Escolha um salgado:</label>
+                <select id="salgado" name="salgado">
+                    <option value="coxinha">Coxinha</option>
+                    <option value="empada">Empada</option>
+                    <option value="quibe">Quibe</option>
+                    <option value="pao-de-queijo">Pão de Queijo</option>
+                </select>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" required>
+                <button type="submit">Enviar Pedido</button>
+            </form>
+            <div id="resultado"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Venda de Salgados de Festa. Todos os direitos reservados.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
